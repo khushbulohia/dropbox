@@ -1,0 +1,31 @@
+{
+  "name": "vfsserver",
+  "version": "1.0.0",
+  "description": "VFSServer",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --use_strict -- index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/smartlyssa/VFSServer.git"
+  },
+  "author": "Lyssa Laudencia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartlyssa/VFSServer/issues"
+  },
+  "homepage": "https://github.com/smartlyssa/VFSServer#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "co": "^4.6.0",
+    "co-express": "^1.2.1",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "safeguards": "0.0.3",
+    "simple-bodyparser": "0.0.4",
+    "songbird": "^1.0.2",
+    "trycatch": "^1.5.21"
+  },
+  "devDependencies": {}
+}
