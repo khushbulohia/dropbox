@@ -1,31 +1,34 @@
 {
-  "name": "vfsserver",
+  "name": "dropbox",
   "version": "1.0.0",
-  "description": "VFSServer",
-  "main": "index.js",
+  "description": "nodejs based dropbox assginment#2",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon --use_strict -- index.js"
+    "start": "nodemon --use_strict -- server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/smartlyssa/VFSServer.git"
+    "url": "git+https://github.com/khushbulohia/dropbox.git"
   },
-  "author": "Lyssa Laudencia",
-  "license": "MIT",
+  "author": "Khushboo Lohia",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/smartlyssa/VFSServer/issues"
+    "url": "https://github.com/khushbulohia/dropbox/issues"
   },
-  "homepage": "https://github.com/smartlyssa/VFSServer#readme",
+  "homepage": "https://github.com/khushbulohia/dropbox#readme",
   "dependencies": {
-    "body-parser": "^1.15.0",
+    "babel-cli": "^6.6.5",
+    "bluebird-nodeify": "^1.0.0",
+    "chokidar": "^1.4.3",
     "co": "^4.6.0",
     "co-express": "^1.2.1",
     "express": "^4.13.4",
-    "morgan": "^1.7.0",
-    "safeguards": "0.0.3",
-    "simple-bodyparser": "0.0.4",
-    "songbird": "^1.0.2",
-    "trycatch": "^1.5.21"
-  },
-  "devDependencies": {}
+    "json-over-tcp": "^0.3.2",
+    "mime-types": "^2.0.10",
+    "mkdirp": "^0.5.0",
+    "morgan": "^1.5.2",
+    "rimraf": "^2.3.2",
+    "songbird": "^1.0.1",
+    "yargs": "^3.8.0"
+  }
 }
