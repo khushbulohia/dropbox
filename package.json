@@ -23,6 +23,7 @@
     "co": "^4.6.0",
     "co-express": "^1.2.1",
     "express": "^4.13.4",
+    "fs-extra": "^0.26.7",
     "json-over-tcp": "^0.3.2",
     "mime-types": "^2.0.10",
     "mkdirp": "^0.5.0",

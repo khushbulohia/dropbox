@@ -1,5 +1,5 @@
 "use strict";
-let fs = require('fs')
+var fs = require('fs')
 let jot = require('json-over-tcp')
 var chokidar = require('chokidar');
 var wrap = require('co');
@@ -21,17 +21,13 @@ function newConnectionHandler(socket){
 function* fileOp(data) {
   console.log(data)
   let srcPath = path.join(__dirname, data.path)
-  let content = yield fs.readFile(srcPath)
-  console.log('c' + content)
   let destPath = srcPath.replace('source', 'dest')
-  if('add' == data.action) {
-    fs.createWriteStream(destPath)
-  } else if('update' == data.action) {
-    yield fs.promise.truncate(destPath, 0)
-    let content = yield fs.promise.readFile(srcPath)
-    yield fs.promise.appendFile(destPath, content)
+  if('add' == data.action || 'update' == data.action) {
+    let rs = fs.createReadStream(srcPath)
+    let ws = fs.createWriteStream(destPath)
+    rs.pipe(ws)
   } else if('remove' == data.action) {
-    yield fs.promise.unlink(destPath)
+    yield fs.unlink(destPath)
   }
 }
 
